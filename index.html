@@ -12,11 +12,33 @@
       color: #333;
     }
 
-    header {
-      background: linear-gradient(to right, #003366, #0066cc);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
+   header {
+  background-image: url('legacy builders image'); /* or use a full URL like https://example.com/banner.jpg */
+  background-size: cover;          /* makes it fill the header */
+  background-position: center;     /* centers the image */
+  background-repeat: no-repeat;    /* stops it from repeating */
+  color: white;                    /* keeps text white and readable */
+  padding: 100px 20px;             /* gives height to your header */
+  text-align: center;
+  position: relative;
+}
+
+/* Optional: add a slight dark overlay for better text contrast */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 60, 0.5); /* a semi-transparent dark overlay */
+}
+
+header h1, header p {
+  position: relative; /* keeps text above overlay */
+  z-index: 1;
+}
+
     }
 
     header h1 {
@@ -172,4 +194,5 @@
 
 </body>
 </html>
+
 
