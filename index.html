@@ -7,11 +7,15 @@
   <style>
    .team-container {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center; /* keeps them centered on the page */
+  align-items: center; /* aligns them vertically */
+  gap: 40px; /* space between each member */
+  flex-wrap: nowrap; /* keeps them in one straight line */
+  overflow-x: auto; /* allows horizontal scroll on small screens */
   margin-top: 30px;
+  padding-bottom: 10px;
 }
+
 
 .team-member {
   text-align: center;
@@ -220,6 +224,7 @@ header h1, header p {
 
 </body>
 </html>
+
 
 
 
